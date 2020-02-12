@@ -53,8 +53,36 @@ x1 <- c(1,2)
 x2 <- c(10,11)
 x1 * x2
 
+a <- LETTERS[1:10]
+b <- seq(1:10)
+c <- b * 2
+m <- cbind(b,c)
+m
+class(m)
+
+m[2,]
+m[,1]
+t(m)
 
 
-#How to help
-help("seq")
+
+
+
+
+a
+b
+m <- cbind(a,b,c)
+m2 <- cbind(a,b)
+m2
+
+d <- data.frame(a = a,b = b, c = c)
+d
+
+x <- c(1, "a")
+y <- list(1, "a")
+y
+
+
+d
+d[1,2:3]
 
