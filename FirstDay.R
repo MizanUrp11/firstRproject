@@ -66,9 +66,6 @@ t(m)
 
 
 
-
-
-
 a
 b
 m <- cbind(a,b,c)
@@ -117,3 +114,15 @@ for (i in 1:3) {
   print(i)
   myFunction(i,ff)
 }
+
+##################Spatial Plotting in R########################
+
+url <- "https://data.humdata.org/dataset/0950e7df-b9eb-4fd3-b89c-a749fd8b69a1/resource/b0aa25f3-575d-47e5-8f7c-10d57a2ef2cd/download/bgd_watcrsa_1m_iscgm.zip"
+download.file(url,dest = 'bgd_rivers.zip')
+unzip('bgd_rivers.zip')
+ff <- list.files(path = ".", full.names = TRUE)
+rv <- shapefile('bgd_watcrsa_1m_iscgm.shp')
+plot(v0, border = "red", lwd = 2, axes = TRUE)
+plot(rv, col='blue', add = TRUE)
+title(main = "BGD rivers")
+legend('bottomright', legend = 'River', lty = 1, lwd = 2, col = 'blue', bty = "n")
