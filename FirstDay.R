@@ -86,3 +86,34 @@ y
 d
 d[1,2:3]
 
+#############################
+
+library(readxl)
+
+#Read File from excel
+indir <- "C:\\Users\\mizan\\Documents\\myFirstRproject\\myFirstRproject\\data"
+
+#List files
+ff <- list.files(path = indir, pattern = ".xls", full.names = TRUE)
+
+
+myFunction <- function(i,ff){
+  f <- ff[i]
+  d <- read_excel(f)
+  colnames(d) <- c("First","Second","Third")
+  d <- d * 10
+  
+  outname <- gsub(".xls",".csv",f)
+  write.csv(d,outname,row.names = FALSE)
+  
+  print(d)
+}
+
+myFunction(1,ff)
+myFunction(2,ff)
+myFunction(3,ff)
+
+for (i in 1:3) {
+  print(i)
+  myFunction(i,ff)
+}
