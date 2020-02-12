@@ -36,14 +36,25 @@ length(dates)
 
 dates[1:10]
 
-
 i <- seq(1, length(dates),5)
 dates[i]
 
+#Repeat
+x1 <- rep("a", 5)
+x1
+
+sqrt(1000)
+
+z <- c(1,10,20,30,40,50,60,70)
+z+2
+z*3
+
+x1 <- c(1,2)
+x2 <- c(10,11)
+x1 * x2
 
 
 
 #How to help
-
 help("seq")
 
