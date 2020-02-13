@@ -1,0 +1,20 @@
+HUAWEI WiFi BARC
+9BQ1H4GD29Y
+
+Web https://biogeo.ucdavis.edu/people.html
+Contact Email >>>
+anighosh@ucdavis.edu, A.Ghosh@cgiar.org
+
+https://shiny.rstudio.com/
+
+Datasource:
+---------------
+wordview.earthdata.nasa.gov
+earthdata.nasa.gov
+https://earthdata.nasa.gov/
+https://ladsweb.modaps.eosdis.nasa.gov/
+https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api
+https://scihub.copernicus.eu/
+
+Python Package:
+https://github.com/sentinel-hub/sentinelhub-py
