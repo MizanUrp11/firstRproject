@@ -116,13 +116,31 @@ for (i in 1:3) {
 }
 
 ##################Spatial Plotting in R########################
+library(raster)
+#setwd("...")
+v0 <- getData("GADM", country = "BGD", level = 0)
+plot(v0, border = "red")
+title(main = "Bangladesh national boundary", sub = "source GADM")
+
+v1 <- getData("GADM", country = "BGD", level = 1)
+# Each region should have different color; we will use the color ramp
+n <- length(v1$NAME_1)
+plot(v1, col=rainbow(n), main = 'Administrative boundary: level 1')
+# Now add name of the indiviudal regions to the map
+text(v1, v1$NAME_1, cex=0.75)
 
 url <- "https://data.humdata.org/dataset/0950e7df-b9eb-4fd3-b89c-a749fd8b69a1/resource/b0aa25f3-575d-47e5-8f7c-10d57a2ef2cd/download/bgd_watcrsa_1m_iscgm.zip"
-download.file(url,dest = 'bgd_rivers.zip')
+download.file(url, dest = 'bgd_rivers.zip')
 unzip('bgd_rivers.zip')
+
+# list the contents of the data folder.
 ff <- list.files(path = ".", full.names = TRUE)
+# we want to read the .shp file with for river outlines
 rv <- shapefile('bgd_watcrsa_1m_iscgm.shp')
+# Next plot rivers with the admin boundaries
 plot(v0, border = "red", lwd = 2, axes = TRUE)
 plot(rv, col='blue', add = TRUE)
-title(main = "BGD rivers")
+title(main = "Tanzania rivers")
+# Add some more details
 legend('bottomright', legend = 'River', lty = 1, lwd = 2, col = 'blue', bty = "n")
+
