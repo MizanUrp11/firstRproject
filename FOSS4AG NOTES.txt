@@ -16,5 +16,19 @@ https://ladsweb.modaps.eosdis.nasa.gov/
 https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api
 https://scihub.copernicus.eu/
 
+Commercial:
+https://www.planet.com/explorer
+Api:
+https://sentinelsat.readthedocs.io/en/stable/
+Qgis:
+https://github.com/sentinelsat/sentinelsat-qgis-script
+
 Python Package:
 https://github.com/sentinel-hub/sentinelhub-py
+
+If you dont want to download
+https://earthengine.google.com/
+
+
+If your project funded by any US Based organization (USAID) or Europe
+Call your Manager for Next View (NV) License. You will get free unlimited high resulation data
